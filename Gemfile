@@ -38,11 +38,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'thin'
-
-group :development do
-  gem 'therubyracer'
-end
-
+gem 'therubyracer'
 gem 'slim'
 gem 'less'
 
