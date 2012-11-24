@@ -41,5 +41,6 @@ gem 'thin'
 gem 'therubyracer'
 gem 'slim'
 gem 'less'
+gem 'seed-fu'
 
 
