@@ -21,24 +21,23 @@ class ReviewsController < ApplicationController
     #respond_to do |format|
      # format.html # show.html.erb
       #format.json { render json: @review }
-      render json: @review
       @temp = {
-        "charity-id" => @review.charity-id
-        "author" => @review.author
-        "title" => @review.title
-        "description" => @review.description
-        "name" => @review.name
-        "rating" => @review.rating
-        "statements" => [1,1,1,1,1,1,1,1,1,1]
-        "orientation" => 1
-        "liked-best" => [1,1,0,1,1,1,1,1,1,1,1,1,0,1,0]
-        "liked-best-other" => ""
-        "liked-least" => [0,0,0,0,0,1,0,0,0,0,0,0,0,0]
-        "liked-least-other" => ""
-        "suggestions" => "More funding needed to help build the charity"
-        "why" => [1,0,0,0,0,0,0,1,1]
-        "why-other"=>""
-        "goals"=>1
+        "charity-id" => @review.charity_id,
+        "author" => @review.author,
+        "title" => @review.title,
+        "description" => @review.description,
+        "name" => @review.name,
+        "rating" => @review.rating,
+        "statements" => [1,1,1,1,1,1,1,1,1,1],
+        "orientation" => 1,
+        "liked-best" => [1,1,0,1,1,1,1,1,1,1,1,1,0,1,0],
+        "liked-best-other" => "",
+        "liked-least" => [0,0,0,0,0,1,0,0,0,0,0,0,0,0],
+        "liked-least-other" => "",
+        "suggestions" => "More funding needed to help build the charity",
+        "why" => [1,0,0,0,0,0,0,1,1],
+        "why-other"=>"",
+        "goals"=>1,
         "comments"=>["author"=>@review.author, "comment"=>"We're glad you had a great time"]
       }
       render json: @temp
