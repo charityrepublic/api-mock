@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  charity-id: 
+  author: MyString
+  title: MyString
+  description: MyString
+  name: MyString
+  rating: 
+  recommend: false
+
+two:
+  charity-id: 
+  author: MyString
+  title: MyString
+  description: MyString
+  name: MyString
+  rating: 
+  recommend: false

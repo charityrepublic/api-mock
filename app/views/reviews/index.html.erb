@@ -1,0 +1,35 @@
+<h1>Listing reviews</h1>
+
+<table>
+  <tr>
+    <th>Charity-id</th>
+    <th>Author</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Name</th>
+    <th>Rating</th>
+    <th>Recommend</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reviews.each do |review| %>
+  <tr>
+    <td><%= review.charity-id %></td>
+    <td><%= review.author %></td>
+    <td><%= review.title %></td>
+    <td><%= review.description %></td>
+    <td><%= review.name %></td>
+    <td><%= review.rating %></td>
+    <td><%= review.recommend %></td>
+    <td><%= link_to 'Show', review %></td>
+    <td><%= link_to 'Edit', edit_review_path(review) %></td>
+    <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Review', new_review_path %>
