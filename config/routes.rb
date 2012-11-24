@@ -1,4 +1,12 @@
 ApiMock::Application.routes.draw do
+  
+  resources :charities
+
+
+  match 'charities/id/:id' => 'charity#detail'
+
+  root :to => 'charity#list'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

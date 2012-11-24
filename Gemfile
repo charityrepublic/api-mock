@@ -36,3 +36,14 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'thin'
+
+group :development do
+  gem 'therubyracer'
+end
+
+gem 'slim'
+gem 'less'
+
+
