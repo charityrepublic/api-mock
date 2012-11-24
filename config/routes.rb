@@ -1,9 +1,8 @@
 ApiMock::Application.routes.draw do
   
-  resources :reviews
-
-
-  resources :charities
+  resources :charities do
+    resources :reviews
+  end
 
   match 'charities/id/:id' => 'charities#show'
 
