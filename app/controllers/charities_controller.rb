@@ -3,11 +3,14 @@ class CharitiesController < ApplicationController
   # GET /charities.json
   def index
     @charities = Charity.all
+    @charities_list = @charities.map{|c| c.id}
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @charities }
-    end
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.json {
+        render json: {"charities" => @charities_list}
+    #  }
+    #end
   end
 
   # GET /charities/1
@@ -15,10 +18,12 @@ class CharitiesController < ApplicationController
   def show
     @charity = Charity.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @charity }
-    end
+    #respond_to do |format|
+    #  format.html # show.html.erb
+    #  format.json {
+        render json: @charity
+    #  }
+    #end
   end
 
   # GET /charities/new
